@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 4 Calculator</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            width: 250px;
+            padding: 10px;
+            margin: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <br/>
+    <br/>
+
+    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Calculator</u></h2>
+    <br/>
+    <br/>
+
+    <label for="number">Enter Number 1  &nbsp;&nbsp;&nbsp;  <input type="number" id="num1" value="Enter number 1"> </label>
+    <br/>
+    <br/>
+
+    <label for="number">Enter Number 2  &nbsp;&nbsp;&nbsp;  <input type="number" id="num2" value="Enter number 2"></label>
+    <br/>
+    <br/>
+    <h3>Result: <span id="result">-</span></h3></label>
+
+    
+
+    <button onclick="performOperation('+')">Addition</button>
+    <button onclick="performOperation('-')">Subtraction</button>
+    <button onclick="performOperation('*')">Multiplication</button>
+    <button onclick="performOperation('/')">Division</button><br>
+
+
+    <script>
+        function performOperation(operation) {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var result;
+
+            if (operation === '+') {
+                result = num1 + num2;
+            } else if (operation === '-') {
+                result = num1 - num2;
+            } else if (operation === '*') {
+                result = num1 * num2;
+            } else if (operation === '/') {
+                result = num1 / num2;
+            }
+
+            document.getElementById('result').textContent = result;
+        }
+    </script>
+</body>
+</html>
